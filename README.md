@@ -21,6 +21,8 @@ To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository to your local machine:
 
+git clone https://github.com/Rahul-Junkie/random-quote-generator.git
+
 2. Navigate into the project directory:
 
 cd random-quote-generator
