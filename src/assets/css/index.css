@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @variants responsive {}
+}
+.card svg {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.card {
+  svg:first-child {
+    animation: top-quote 2s infinite;
+  }
+  svg:nth-child(2)  {
+    animation: bottom-quote 2s infinite;
+  }
+}
+@keyframes top-quote {
+  0% {transform: translate(50px, 80px);opacity:0;}
+  50% {transform: translate(50px, 0px);opacity:1;}
+  100% {transform: translate(0px, 0px);}
+}
+@keyframes bottom-quote {
+  0% {transform: translate(-50px, -80px);opacity:0;}
+  50% {transform: translate(-50px, 0px);opacity:1;}
+  100% {transform: translate(0px, 0px);}
+}
+
+
+
+/* Button  CSS */
+.loader {
+  right: 0.875rem;
+  top: 50%;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid rgba(#fff, 0.35);
+}
+
+.animation-spin {
+  animation-name: spin;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
