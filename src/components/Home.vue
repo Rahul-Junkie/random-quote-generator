@@ -42,7 +42,6 @@ export default {
   components: { Quote },
   data() {
     return {
-      iconClass: "duration-200 transform hover:scale-105",
       originalbuttonText: "Generate Quote",
       buttonClicked: false,
       quoteData: {
@@ -83,7 +82,7 @@ export default {
           throw new Error("Failed to fetch quote");
         }
       } catch (error) {
-        // If there's an error in the request, log the error and return null
+        // If there's an error in the request, log the error
         alert("Error fetching quote:", error.message);
       }
     },
